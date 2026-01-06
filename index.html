@@ -1,178 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Riley & Nguyen | Our Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: #1f2937;
-      background-color: #ffffff;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(120deg, #0f172a, #1e3a8a);
-      color: white;
-      padding: 80px 10%;
-    }
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-    header p {
-      font-size: 18px;
-      max-width: 700px;
-    }
-    section {
-      padding: 80px 10%;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-    }
-    .card {
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #fff;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 25px 40px rgba(0,0,0,0.08);
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 25px;
-    }
-    .card-content h3 {
-      margin-top: 0;
-      font-size: 22px;
-    }
-    .card-content p {
-      font-size: 15px;
-      color: #4b5563;
-    }
-    .cta {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 70px 10%;
-    }
-    .cta h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 14px 32px;
-      background: white;
-      color: #1e3a8a;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 30px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #6b7280;
-      border-top: 1px solid #e5e7eb;
-    }
-  </style>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riley & Nguyen | Our Services</title>
 
-<body>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<header>
-  <h1>Our Services</h1>
-  <p>
-    Riley & Nguyen delivers accounting, tax, and advisory services designed to
-    provide clarity, reduce risk, and support confident financial decisions for
-    individuals and businesses.
-  </p>
-</header>
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+}
 
-<section>
-  <div class="services">
+header {
+  background: linear-gradient(120deg, #0f172a, #1e3a8a);
+  color: white;
+  padding: 80px 10%;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Accounting Services">
-      <div class="card-content">
-        <h3>Accounting Services</h3>
-        <p>
-          Accurate financial reporting is essential to informed decision-making.
-          We deliver clear, reliable statements and insights that support growth,
-          compliance, and long-term planning.
-        </p>
-      </div>
-    </div>
+header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1554774853-b4159a3c4e42" alt="Bookkeeping Services">
-      <div class="card-content">
-        <h3>Bookkeeping Services</h3>
-        <p>
-          Our tailored bookkeeping solutions keep your records organized, current,
-          and audit-ready, freeing you to focus on running and scaling your business.
-        </p>
-      </div>
-    </div>
+header p {
+  font-size: 18px;
+  max-width: 720px;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07" alt="Tax Services">
-      <div class="card-content">
-        <h3>Tax Planning & Compliance</h3>
-        <p>
-          We guide clients through tax preparation and proactive planning strategies
-          that minimize liability, maximize cash flow, and align with evolving tax laws.
-        </p>
-      </div>
-    </div>
+section {
+  padding: 80px 10%;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Consulting Services">
-      <div class="card-content">
-        <h3>Consulting & Advisory</h3>
-        <p>
-          Our advisory services provide practical insights and tailored strategies
-          to improve performance, efficiency, and financial resilience.
-        </p>
-      </div>
-    </div>
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a" alt="Additional Services">
-      <div class="card-content">
-        <h3>Additional Services</h3>
-        <p>
-          From financial modeling to interim support, we offer flexible solutions
-          designed to meet unique business challenges and evolving needs.
-        </p>
-      </div>
-    </div>
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  min-height: 560px;
+}
 
-  </div>
-</section>
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 45px rgba(0,0,0,0.1);
+}
 
-<section class="cta">
-  <h2>Let’s Build Financial Confidence Together</h2>
-  <p>Schedule a consultation to learn how Riley & Nguyen can support your goals.</p>
-  <a href="https://www.rileynguyen.com/contact">Get in Touch</a>
-</section>
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-<footer>
-  © Riley & Nguyen, CPAs & Advisors | Services Preview
-</footer>
+.card-content {
+  padding: 26px;
+}
 
-</body>
-</html>
+.card-content h3 {
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  font-size: 15px;
+  color: #4b5563;
+}
+
+.card-detail
