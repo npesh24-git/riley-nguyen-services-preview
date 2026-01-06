@@ -76,4 +76,193 @@ section {
   color: #4b5563;
 }
 
-.card-detail
+.card-details {
+  margin-top: 18px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.45s ease;
+}
+
+.card:hover .card-details {
+  opacity: 1;
+  max-height: 320px;
+}
+
+.card-details ul {
+  padding-left: 18px;
+  margin: 10px 0 0 0;
+}
+
+.card-details li {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.cta {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 70px 10%;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.cta p {
+  font-size: 17px;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 34px;
+  background: white;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Our Services</h1>
+  <p>
+    Riley & Nguyen provides accounting, tax, and advisory services designed
+    to deliver clarity, reduce risk, and support confident financial decisions
+    for individuals and businesses.
+  </p>
+</header>
+
+<section>
+<div class="services">
+
+<!-- Accounting -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f">
+  <div class="card-content">
+    <h3>Accounting Services</h3>
+    <p>
+      Accurate, reliable financial reporting that gives you visibility into
+      performance, compliance, and long-term planning.
+    </p>
+    <div class="card-details">
+      <ul>
+        <li>Monthly, quarterly, and year-end financial statements</li>
+        <li>Cash flow and budget analysis</li>
+        <li>General ledger review and reconciliation</li>
+        <li>CPA-ready reports for tax and audit purposes</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Bookkeeping -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1554774853-b4159a3c4e42">
+  <div class="card-content">
+    <h3>Bookkeeping Services</h3>
+    <p>
+      Customized bookkeeping solutions that keep your records organized,
+      current, and audit-ready.
+    </p>
+    <div class="card-details">
+      <ul>
+        <li>Accounts receivable and invoicing</li>
+        <li>Accounts payable and vendor payments</li>
+        <li>Bank and credit card reconciliations</li>
+        <li>Payroll processing and sales tax filings</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Tax -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07">
+  <div class="card-content">
+    <h3>Tax Planning & Compliance</h3>
+    <p>
+      Proactive tax guidance that minimizes liability, maximizes cash flow,
+      and adapts to changing tax laws.
+    </p>
+    <div class="card-details">
+      <ul>
+        <li>Individual and business tax preparation</li>
+        <li>Strategic tax planning and forecasting</li>
+        <li>Tax law research and compliance support</li>
+        <li>Audit assistance and IRS correspondence</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Consulting -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+  <div class="card-content">
+    <h3>Consulting & Advisory</h3>
+    <p>
+      Practical advisory services that improve performance, efficiency,
+      and financial resilience.
+    </p>
+    <div class="card-details">
+      <ul>
+        <li>Operational and financial performance improvement</li>
+        <li>Process and internal control evaluation</li>
+        <li>Strategic planning and growth advisory</li>
+        <li>Cross-department consulting support</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Additional -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a">
+  <div class="card-content">
+    <h3>Additional Services</h3>
+    <p>
+      Flexible financial solutions designed to support unique needs
+      and evolving business challenges.
+    </p>
+    <div class="card-details">
+      <ul>
+        <li>Financial modeling and forecasting</li>
+        <li>Budget preparation and scenario analysis</li>
+        <li>Interim CFO and project-based support</li>
+        <li>Customized reporting and training</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+  <h2>Let’s Build Financial Confidence Together</h2>
+  <p>Schedule a consultation to see how Riley & Nguyen can support your goals.</p>
+  <a href="https://www.rileynguyen.com/contact">Get in Touch</a>
+</section>
+
+<footer>
+  © Riley & Nguyen, CPAs & Advisors | Services Preview
+</footer>
+
+</body>
+</html>
