@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Riley & Nguyen | Our Services</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -16,13 +16,14 @@ body {
 }
 
 header {
-  background: #0f172a;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
   color: white;
   padding: 90px 10%;
 }
 
 header h1 {
   font-size: 44px;
+  margin-bottom: 16px;
 }
 
 header p {
@@ -44,29 +45,33 @@ section {
 .card {
   background: white;
   border-radius: 16px;
-  border: 2px solid #e5e7eb;
-  padding: 30px;
+  border: 1px solid #e5e7eb;
+  padding: 32px;
   cursor: pointer;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover {
-  border-color: #1e3a8a;
+  transform: translateY(-6px);
   box-shadow: 0 25px 40px rgba(0,0,0,0.12);
 }
 
-/* ICON BLOCK */
+/* ICON */
 .icon {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   border-radius: 14px;
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+}
+
+.icon svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
 }
 
 /* TEXT */
@@ -76,16 +81,17 @@ section {
 }
 
 .card p {
-  color: #4b5563;
   font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 0;
 }
 
-/* EXPANDABLE */
+/* EXPANDABLE DETAILS */
 .details {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
-  margin-top: 15px;
+  margin-top: 16px;
 }
 
 .card.active .details {
@@ -94,12 +100,12 @@ section {
 
 .details ul {
   padding-left: 18px;
-  margin: 0;
+  margin-top: 12px;
 }
 
 .details li {
-  margin-bottom: 10px;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 /* CTA */
@@ -139,18 +145,21 @@ footer {
 <header>
   <h1>Our Services</h1>
   <p>
-    Professional accounting, tax, and advisory services designed to provide
-    clarity, reduce risk, and support confident financial decisions.
+    Accounting, tax, and advisory services designed to provide clarity,
+    reduce risk, and support confident financial decision-making.
   </p>
 </header>
 
 <section>
 <div class="services">
 
+<!-- Accounting -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">📊</div>
+  <div class="icon">
+    <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM7 7h10v2H7zm0 4h10v2H7zm0 4h6v2H7z"/></svg>
+  </div>
   <h3>Accounting Services</h3>
-  <p>Accurate reporting that supports compliance and strategic planning.</p>
+  <p>Accurate financial reporting that supports compliance and planning.</p>
   <div class="details">
     <ul>
       <li>Monthly, quarterly, and year-end financial statements</li>
@@ -161,10 +170,13 @@ footer {
   </div>
 </div>
 
+<!-- Bookkeeping -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">🧾</div>
+  <div class="icon">
+    <svg viewBox="0 0 24 24"><path d="M4 3h14a2 2 0 012 2v14a2 2 0 01-2 2H4zM7 7h10v2H7zm0 4h10v2H7zm0 4h8v2H7z"/></svg>
+  </div>
   <h3>Bookkeeping Services</h3>
-  <p>Organized, up-to-date financial records you can trust.</p>
+  <p>Organized, up-to-date records that give you day-to-day visibility.</p>
   <div class="details">
     <ul>
       <li>Accounts receivable and invoicing</li>
@@ -175,44 +187,53 @@ footer {
   </div>
 </div>
 
+<!-- Tax -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">🧮</div>
+  <div class="icon">
+    <svg viewBox="0 0 24 24"><path d="M12 2l4 8h-8l4-8zm-7 9h14v11H5z"/></svg>
+  </div>
   <h3>Tax Planning & Compliance</h3>
-  <p>Proactive tax strategies aligned with current laws.</p>
+  <p>Proactive strategies aligned with current tax laws.</p>
   <div class="details">
     <ul>
       <li>Individual and business tax preparation</li>
       <li>Strategic tax planning</li>
-      <li>IRS correspondence support</li>
-      <li>Audit assistance</li>
+      <li>Audit and IRS correspondence support</li>
+      <li>Tax law research and guidance</li>
     </ul>
   </div>
 </div>
 
+<!-- Consulting -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">🧠</div>
+  <div class="icon">
+    <svg viewBox="0 0 24 24"><path d="M4 4h16v10H4zm2 12h12v2H6z"/></svg>
+  </div>
   <h3>Consulting & Advisory</h3>
-  <p>Strategic insight to improve efficiency and growth.</p>
+  <p>Strategic insight to improve performance and efficiency.</p>
   <div class="details">
     <ul>
       <li>Operational performance improvement</li>
       <li>Process and internal control evaluation</li>
-      <li>Strategic planning</li>
-      <li>Cross-department advisory</li>
+      <li>Strategic planning and growth advisory</li>
+      <li>Cross-department consulting</li>
     </ul>
   </div>
 </div>
 
+<!-- Additional -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">➕</div>
+  <div class="icon">
+    <svg viewBox="0 0 24 24"><path d="M11 2h2v20h-2zM2 11h20v2H2z"/></svg>
+  </div>
   <h3>Additional Services</h3>
-  <p>Flexible financial solutions for evolving needs.</p>
+  <p>Flexible financial solutions for evolving business needs.</p>
   <div class="details">
     <ul>
       <li>Financial modeling and forecasting</li>
-      <li>Budget preparation</li>
-      <li>Interim CFO support</li>
-      <li>Custom reporting and training</li>
+      <li>Budget preparation and scenario analysis</li>
+      <li>Interim CFO and project-based support</li>
+      <li>Customized reporting and training</li>
     </ul>
   </div>
 </div>
