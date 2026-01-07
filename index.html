@@ -23,7 +23,7 @@ header {
 
 header h1 {
   font-size: 44px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 header p {
@@ -37,50 +37,54 @@ section {
 
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 36px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px;
 }
 
 /* CARD */
 .card {
   background: white;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid #e5e7eb;
-  padding: 32px;
+  overflow: hidden;
   cursor: pointer;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 25px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.12);
 }
 
-/* ICON */
-.icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+/* VISUAL HEADER */
+.visual {
+  height: 140px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-.icon svg {
-  width: 28px;
-  height: 28px;
-  fill: white;
-}
-
-/* TEXT */
-.card h3 {
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
   font-size: 22px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  transition: transform 0.4s ease;
 }
 
-.card p {
+.card:hover .visual {
+  transform: scale(1.04);
+}
+
+.accounting { background: linear-gradient(135deg, #2563eb, #1e40af); }
+.bookkeeping { background: linear-gradient(135deg, #059669, #065f46); }
+.tax { background: linear-gradient(135deg, #7c3aed, #4c1d95); }
+.consulting { background: linear-gradient(135deg, #ea580c, #9a3412); }
+.additional { background: linear-gradient(135deg, #475569, #1f2937); }
+
+/* CONTENT */
+.card-content {
+  padding: 28px;
+}
+
+.card-content p {
   font-size: 15px;
   color: #4b5563;
   margin-bottom: 0;
@@ -95,12 +99,12 @@ section {
 }
 
 .card.active .details {
-  max-height: 500px;
+  max-height: 700px;
 }
 
 .details ul {
   padding-left: 18px;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .details li {
@@ -145,8 +149,9 @@ footer {
 <header>
   <h1>Our Services</h1>
   <p>
-    Accounting, tax, and advisory services designed to provide clarity,
-    reduce risk, and support confident financial decision-making.
+    Riley & Nguyen provides individuals and businesses with dedicated,
+    reliable accounting, tax, and financial advisory services built on
+    over 30 years of trusted relationships.
   </p>
 </header>
 
@@ -155,86 +160,97 @@ footer {
 
 <!-- Accounting -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">
-    <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM7 7h10v2H7zm0 4h10v2H7zm0 4h6v2H7z"/></svg>
-  </div>
-  <h3>Accounting Services</h3>
-  <p>Accurate financial reporting that supports compliance and planning.</p>
-  <div class="details">
-    <ul>
-      <li>Monthly, quarterly, and year-end financial statements</li>
-      <li>Cash flow and budget analysis</li>
-      <li>General ledger reconciliation</li>
-      <li>CPA-ready reports for tax and audit</li>
-    </ul>
+  <div class="visual accounting">Accounting Services</div>
+  <div class="card-content">
+    <p>
+      Clear, accurate financial reporting that allows you to make confident
+      decisions while we ensure your records are maintained correctly.
+    </p>
+    <div class="details">
+      <ul>
+        <li>Cash flow and budgeting support</li>
+        <li>Financial statements and management reports</li>
+        <li>Monthly, quarterly, and year-end reviews</li>
+        <li>CPA-ready reports for tax and audit purposes</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <!-- Bookkeeping -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">
-    <svg viewBox="0 0 24 24"><path d="M4 3h14a2 2 0 012 2v14a2 2 0 01-2 2H4zM7 7h10v2H7zm0 4h10v2H7zm0 4h8v2H7z"/></svg>
-  </div>
-  <h3>Bookkeeping Services</h3>
-  <p>Organized, up-to-date records that give you day-to-day visibility.</p>
-  <div class="details">
-    <ul>
-      <li>Accounts receivable and invoicing</li>
-      <li>Accounts payable and vendor payments</li>
-      <li>Bank and credit card reconciliations</li>
-      <li>Payroll and sales tax filings</li>
-    </ul>
+  <div class="visual bookkeeping">Bookkeeping Services</div>
+  <div class="card-content">
+    <p>
+      Tailored bookkeeping solutions designed to keep your records organized,
+      accurate, and up to date while freeing you to focus on your business.
+    </p>
+    <div class="details">
+      <ul>
+        <li>Accounts receivable, invoicing, and collections</li>
+        <li>Accounts payable and vendor payments</li>
+        <li>Bank and credit card reconciliations</li>
+        <li>Payroll processing and sales tax filings</li>
+        <li>General ledger and full accounting record recreation</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <!-- Tax -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">
-    <svg viewBox="0 0 24 24"><path d="M12 2l4 8h-8l4-8zm-7 9h14v11H5z"/></svg>
-  </div>
-  <h3>Tax Planning & Compliance</h3>
-  <p>Proactive strategies aligned with current tax laws.</p>
-  <div class="details">
-    <ul>
-      <li>Individual and business tax preparation</li>
-      <li>Strategic tax planning</li>
-      <li>Audit and IRS correspondence support</li>
-      <li>Tax law research and guidance</li>
-    </ul>
+  <div class="visual tax">Tax Services</div>
+  <div class="card-content">
+    <p>
+      Proactive tax planning and preparation strategies designed to minimize
+      liabilities and keep you aligned with changing tax laws.
+    </p>
+    <div class="details">
+      <ul>
+        <li>Individual and business tax preparation</li>
+        <li>Strategic tax planning and forecasting</li>
+        <li>Tax law research and compliance guidance</li>
+        <li>IRS notices and audit support</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <!-- Consulting -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">
-    <svg viewBox="0 0 24 24"><path d="M4 4h16v10H4zm2 12h12v2H6z"/></svg>
-  </div>
-  <h3>Consulting & Advisory</h3>
-  <p>Strategic insight to improve performance and efficiency.</p>
-  <div class="details">
-    <ul>
-      <li>Operational performance improvement</li>
-      <li>Process and internal control evaluation</li>
-      <li>Strategic planning and growth advisory</li>
-      <li>Cross-department consulting</li>
-    </ul>
+  <div class="visual consulting">Consulting & Advisory</div>
+  <div class="card-content">
+    <p>
+      Bespoke advisory services that help organizations identify savings,
+      improve performance, and support sustainable growth.
+    </p>
+    <div class="details">
+      <ul>
+        <li>Operational and financial performance improvement</li>
+        <li>Internal controls and process evaluation</li>
+        <li>Strategic planning and growth advisory</li>
+        <li>Cross-department consulting support</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <!-- Additional -->
 <div class="card" onclick="this.classList.toggle('active')">
-  <div class="icon">
-    <svg viewBox="0 0 24 24"><path d="M11 2h2v20h-2zM2 11h20v2H2z"/></svg>
-  </div>
-  <h3>Additional Services</h3>
-  <p>Flexible financial solutions for evolving business needs.</p>
-  <div class="details">
-    <ul>
-      <li>Financial modeling and forecasting</li>
-      <li>Budget preparation and scenario analysis</li>
-      <li>Interim CFO and project-based support</li>
-      <li>Customized reporting and training</li>
-    </ul>
+  <div class="visual additional">Additional Services</div>
+  <div class="card-content">
+    <p>
+      Flexible financial solutions designed to meet the evolving needs of
+      small businesses across industries.
+    </p>
+    <div class="details">
+      <ul>
+        <li>Financial modeling and forecasting</li>
+        <li>Budget preparation and scenario analysis</li>
+        <li>Interim CFO and project-based support</li>
+        <li>Customized reporting and financial training</li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -243,7 +259,7 @@ footer {
 
 <section class="cta">
   <h2>Let’s Build Financial Confidence Together</h2>
-  <a href="https://www.rileynguyen.com/contact">Get in Touch</a>
+  <a href="https://www.rileynguyen.com/contact">Schedule a Consultation</a>
 </section>
 
 <footer>
